@@ -4,4 +4,6 @@
 @import url(../vendor/fonts.css);
 @import url(../blocks/header.css);
 @import url(../blocks/lead.css);
+@import url(../blocks/gallery.css);
+@import url(../blocks/stories.css);
 @import url(../blocks/footer.css);
