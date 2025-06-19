@@ -91,30 +91,36 @@
 @media screen and (min-width: 320px) and (max-width: 544px) {
   .stories {
     max-width: 300px;
-    gap: 50px;
-    margin: 0 auto 65px;
+    gap: 24px;
+    margin: 0 auto 32px;
   }
 
   .stories__content {
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(5, 0fr) 50px;
-    grid-gap: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-gap: 20px;
   }
 
   .stories__header {
-    font-size: 32px;
-    line-height: 35px;
+    font-size: 28px;
+    line-height: 32px;
+    margin: 0;
+  }
+
+  .stories__image,
+  .stories__button,
+  .stories__paragraph {
+    max-width: 100%;
+    grid-column: 1;
   }
 
   .stories__image {
-    max-width: 320px;
-    max-height: 320px;
-    grid-column: 1;
-    grid-row: 3;
+    max-height: none;
+    grid-row: 2;
   }
 
   .stories__button {
-    max-width: 320px;
     font-size: 14px;
     grid-row: 6;
   }
@@ -122,13 +128,14 @@
   .stories__link {
     padding: 0;
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 3;
   }
 
   .stories__paragraph {
-    max-width: 290px;
-    grid-column: 1;
+    font-size: 14px;
+    line-height: 1.4;
     grid-row: 4;
+    margin: 0;
   }
 }
 
