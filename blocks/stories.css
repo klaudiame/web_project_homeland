@@ -7,14 +7,20 @@
 }
 
 .stories__content {
-  max-width: 984px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 125px repeat(3, 1fr) 50px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header image"
+    "paragraph image"
+    "button image";
   grid-gap: 48px 40px;
+  max-width: 984px;
+  margin: 0 auto;
 }
 
 .stories__header {
+  grid-area: header;
   max-width: 460px;
   height: max-content;
   font-family: "Inter-Black", sans-serif;
@@ -26,6 +32,7 @@
 }
 
 .stories__image {
+  grid-area: image;
   max-width: 460px;
   max-height: 460px;
   grid-column: 1 / 4;
@@ -43,6 +50,7 @@
 }
 
 .stories__button {
+  grid-area: button;
   text-decoration: none;
   padding: 15px;
   font-size: 18px;
@@ -61,6 +69,7 @@
 }
 
 .stories__link {
+  grid-area: website;
   text-decoration: none;
   color: white;
   font-size: 18px;
@@ -81,6 +90,7 @@
 }
 
 .stories__paragraph {
+  grid-area: paragraph;
   max-width: 484px;
   line-height: 1.6;
   grid-column: span 3;
