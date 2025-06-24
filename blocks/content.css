@@ -69,6 +69,10 @@
 }
 
 @media screen and (max-width: 544px) {
+  .content {
+    padding: 0;
+  }
+
   .content__intro {
     max-width: 100%;
     margin: 24px 0px;
